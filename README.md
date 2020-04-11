@@ -4,11 +4,13 @@ A simple tampermonkey script that warns you with a ding when a delivery slot is 
 Note 3 things to use this script : 
 
 1 ) this assumes use of Tampermonkey, which is a chrome extension.
+
 2 ) Chrome has some strict policies with regards to how it allows autoplay sounds. This won't work correctly unless you set a key
 in your Windows Registry.
  - Open up the registry editor from the start menu. ( you can search 'regedit' to find it )
  - Navigate to HKEY_LOCAL_MACHINE > SOFTWARE > Policies > Google > Chrome > AutoplayWhitelist
  - Then create an entry named "1" with a value of "https://www.amazon.com/gp/buy/shipoptionselect/handlers/display.html?hasWorkingJavascript=1". The folders for this key might not exist. If not, just make them. 
+ 
 3 ) Fill your shopping cart, and then navigate to the delivery selection page. Leave the page open. This script will reload the page
 every 60 seconds and then make a ding when your able to complete your order. 
 
